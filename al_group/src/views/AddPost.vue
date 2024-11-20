@@ -1,8 +1,8 @@
 <template>
   <div>
-      <h1>Postitused!</h1>
     <main>
-      <BlogPost  />
+      <h1>Add Post</h1>
+
     </main>
 
   </div>
@@ -10,15 +10,12 @@
 
 <script>
 
-import BlogPost from '@/components/BlogPost.vue'
-
 export default {
   components: {
-    BlogPost
   }
 }
 </script>
 
 <style scoped>
-/* Your home page styles here */
+/* About page styles */
 </style>
