@@ -1,7 +1,15 @@
 <template>
-  <h1>Sign up
-  </h1>
+  <div id="app">
+    <SignupPage />
+  </div>
 </template>
 
 <script>
+import SignupPage from '@/components/LogIn.vue'
+
+export default {
+  components: {
+    SignupPage
+  }
+}
 </script>
