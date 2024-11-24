@@ -30,8 +30,8 @@ export default {
   .navbar {
     display: flex;
     justify-content: space-between;
-    padding: 10px;
-    background-color: #333;
+    padding: 15px;
+    background-color: #2c6e49;
     color: white;
   }
 
@@ -47,5 +47,11 @@ export default {
   .navbar a {
     text-decoration: none;
     color: white;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.2s ease;
   }
+  .navbar a:hover {
+  color: #ff5722;
+}
   </style>

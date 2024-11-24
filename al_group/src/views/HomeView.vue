@@ -43,3 +43,35 @@ export default {
   }
 }
 </script>
+<style scoped>
+/* Styling for the reset button container */
+.reset-likes-container {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+/* Styling for the reset button */
+.reset-likes {
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.reset-likes:hover {
+  background-color: #e64a19;
+  transform: translateY(-2px);
+}
+
+.reset-likes:active {
+  background-color: #d84315;
+  transform: translateY(1px); /* Press effect */
+}
+</style>

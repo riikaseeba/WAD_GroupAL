@@ -75,17 +75,20 @@ export default {
   .post {
     border: 0px; /* Add border */
     border-radius: 30px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
     display: flex;
     flex-direction: column;
-    background-color: rgb(181, 216, 175);
+    background-color: #d9f1e3;
+    margin: 15px auto;
+    max-width: 600px;
     width: 300px; /* Control fieldset width */
     width: 540px;
 }
 
 .post .posthead h1 {
     font-size: 20px;
-    color: black;
+    color: #333333;
     margin-bottom: 10px;
     margin-left: 150px;
 }
@@ -104,7 +107,7 @@ export default {
 }
 
 .posthead ~ .postcap{       /*General Sibling Selector (~)*/
-    color: black;
+    color: #333333;
     margin-top: 10px;
     font-size: 16px;
     font-weight: 350;
@@ -114,4 +117,32 @@ export default {
     font-size: 20px;
     cursor: pointer;
 }
+
+.like-section {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.like-section button {
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background-color 0.2s ease;
+}
+
+.like-section button:hover {
+  background-color: #e64a19;
+}
+
+.like-section span {
+  font-size: 14px;
+  color: #333333;
+}
+
   </style>
