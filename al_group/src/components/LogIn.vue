@@ -29,7 +29,7 @@ export default {
     Validate () {
       const password = document.getElementById('password').value
       const errors = []
-      var errorMesage=''
+      let errorMesage = ''
 
       // Password validation checks
       if (password.length < 8 || password.length >= 15) {
@@ -50,11 +50,11 @@ export default {
       if (!/_/.test(password)) {
         errors.push("Password must include the character '_'.")
       }
-      const valid = errors.length == 0
+      const valid = errors.length === 0
       if (!valid) {
         errors.forEach((item, index) => {
-        errorMesage = errorMesage + item
-      })
+          errorMesage = errorMesage + item
+        })
         alert('The password is not valid - ' + errorMesage)// + ${errors.join(" ")})
         return false
       } else {
