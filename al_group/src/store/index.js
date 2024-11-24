@@ -33,8 +33,25 @@ export default createStore({
       }))
     }
   },
-  actions: {
-  },
+  // likede osa
   mutations: {
+    incrementLikes (state, postId) {
+      const post = state.posts.find(post => post.id === postId)
+      if (post) {
+        post.likes++
+      }
+    },
+    resetAllLikes (state) {
+      state.posts.forEach(post => (post.likes = 0))
+    }
+  },
+  actions: {
+    likePost ({ commit }, postId) {
+      commit('incrementLikes', postId)
+    },
+    resetLikes ({ commit }) {
+      commit('resetAllLikes')
+    }
+
   }
 })

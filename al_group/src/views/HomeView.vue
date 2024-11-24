@@ -13,6 +13,8 @@
     <BlogPost :postId="8" />
     <BlogPost :postId="9" />
     <BlogPost :postId="10" />
+    <!-- Reset all likes -->
+    <button class="reset-likes" @click="resetAllLikes">Reset All Likes</button>
   </div>
 </template>
 
@@ -26,6 +28,18 @@ export default {
   name: 'HomeView',
   components: {
     HelloWorld, BlogPost
+  },
+  computed: {
+    // Fetch all posts from Vuex store
+    posts () {
+      return this.$store.getters.allPosts
+    }
+  },
+  methods: {
+    resetAllLikes () {
+      // Dispatch Vuex action to reset all likes
+      this.$store.dispatch('resetLikes')
+    }
   }
 }
 </script>
