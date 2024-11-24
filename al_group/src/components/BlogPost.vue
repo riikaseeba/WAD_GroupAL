@@ -19,7 +19,10 @@
                 <h3 v-if="post.title">{{ post.title }}</h3>
                 <p>{{ post.content }}</p>
             </div>
-            <div class="likeIcon">👍 {{ post.likes }}</div>
+            <div class="like-section">
+                <button @click="likePost">👍 Like</button>
+                <span>{{ post.likes }} likes</span>
+            </div>
         </fieldset>
         <br>
     </div>
@@ -35,6 +38,11 @@ export default {
     post () {
       // Directly accessing the post from the store's state using this.$store
       return this.$store.state.posts.find(post => post.id === this.postId) || null
+    }
+  },
+  methods: {
+    likePost () {
+      this.$store.dispatch('likePost', this.post.id)
     }
   }
 }
@@ -101,11 +109,9 @@ export default {
     font-size: 16px;
     font-weight: 350;
 }
-
 .post.likeIcon {
     margin-top: 10px;
     font-size: 20px;
     cursor: pointer;
-
 }
   </style>
