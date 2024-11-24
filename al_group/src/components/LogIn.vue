@@ -5,6 +5,7 @@
         <input
             placeholder="Email"
         />
+        <br>
     <form>
       <label for="password">Password:</label>
       <input
@@ -14,6 +15,8 @@
        id="password"
         placeholder="Password"
       />
+      <br>
+      <br>
       <button @click=Validate()>submit</button>
     </form>
   </div>
@@ -74,12 +77,15 @@ export default {
     width: 540px;
     margin: 100px auto;
 }
-# signup input{
-    width: 100%;
-    padding: 50px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+
+.signup input{
+  display: block;
+  padding: 10px 6px;
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid white;
+  color: rgb(69, 26, 4);
 }
 .error-messages {
   color: red;
